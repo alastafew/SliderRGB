@@ -49,7 +49,6 @@ final class ViewController: UIViewController {
             alpha: 1
         )
     }
-    
     private func sliderSetup() {
         redSlider.minimumValue = minValue
         redSlider.maximumValue = Float(maxValue)
