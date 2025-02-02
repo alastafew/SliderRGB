@@ -25,32 +25,40 @@ final class ViewController: UIViewController {
     }
     // MARK: - IB Actions
     @IBAction private func redSliderAction() {
-        redValueLabel.text = String(format: "%.2f", redSlider.value/maxValue)
+        redValueLabel.text = String(
+            format: "%.2f", redSlider.value/Float(maxValue))
         screenAction()
     }
     @IBAction private func greenSliderAction() {
-        greenValueLabel.text = String(format: "%.2f", greenSlider.value/maxValue)
+        greenValueLabel.text = String(
+            format: "%.2f", greenSlider.value/Float(maxValue))
         screenAction()
     }
     @IBAction private func blueSliderAction() {
-        blueValueLabel.text = String(format: "%.2f", blueSlider.value/maxValue)
+        blueValueLabel.text = String(
+            format: "%.2f", blueSlider.value/Float(maxValue))
         screenAction()
     }
     
     // MARK: - Private Properties
-    private var minValue: Float = 0
-    private var maxValue: Float = 255
+    private let minValue: Float = 0
+    private let maxValue: Double = 255
     
     private func screenAction() {
-        screenView.backgroundColor = .init(red: CGFloat(redSlider.value)/255, green: CGFloat(greenSlider.value)/255, blue: CGFloat(blueSlider.value)/255, alpha: 1)
+        screenView.backgroundColor = .init(
+            red: CGFloat(redSlider.value)/maxValue,
+            green: CGFloat(greenSlider.value)/maxValue,
+            blue: CGFloat(blueSlider.value)/maxValue,
+            alpha: 1
+        )
     }
     private func sliderSetup() {
         redSlider.minimumValue = minValue
-        redSlider.maximumValue = maxValue
-        greenSlider.minimumValue = minValue
-        greenSlider.maximumValue = maxValue
-        blueSlider.minimumValue = minValue
-        blueSlider.maximumValue = maxValue
+        redSlider.maximumValue = Float(maxValue)
+        greenSlider.minimumValue = redSlider.minimumValue
+        greenSlider.maximumValue = redSlider.maximumValue
+        blueSlider.minimumValue = redSlider.minimumValue
+        blueSlider.maximumValue = redSlider.maximumValue
     }
 }
 
