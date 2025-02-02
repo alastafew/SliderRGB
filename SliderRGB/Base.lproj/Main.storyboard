@@ -34,6 +34,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoI-ma-oKh">
                                         <rect key="frame" x="30" y="0.0" width="31.333333333333329" height="15.333333333333334"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -58,6 +59,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDN-wf-rRq">
                                         <rect key="frame" x="30.333333333333336" y="0.0" width="31.333333333333336" height="15"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -82,6 +84,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-j8-Tl5">
                                         <rect key="frame" x="30" y="0.0" width="31.333333333333329" height="15.333333333333334"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -118,11 +121,11 @@
                     </view>
                     <connections>
                         <outlet property="blueSlider" destination="1BK-gA-6JI" id="qf6-FT-grH"/>
-                        <outlet property="blueValue" destination="P2k-j8-Tl5" id="0oa-1M-Vt1"/>
+                        <outlet property="blueValueLabel" destination="P2k-j8-Tl5" id="0oa-1M-Vt1"/>
                         <outlet property="greenSlider" destination="t99-qP-Gq4" id="lj0-F8-gUt"/>
-                        <outlet property="greenValue" destination="tDN-wf-rRq" id="eio-vK-cuM"/>
+                        <outlet property="greenValueLabel" destination="tDN-wf-rRq" id="eio-vK-cuM"/>
                         <outlet property="redSlider" destination="OVJ-Ef-IuR" id="Tbf-cD-Dyj"/>
-                        <outlet property="redValue" destination="uoI-ma-oKh" id="NG8-Vs-X3c"/>
+                        <outlet property="redValueLabel" destination="uoI-ma-oKh" id="NG8-Vs-X3c"/>
                         <outlet property="screenView" destination="LDW-SH-FYe" id="Rlm-Ei-L5N"/>
                     </connections>
                 </viewController>
