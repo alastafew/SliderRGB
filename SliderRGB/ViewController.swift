@@ -20,6 +20,7 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenView.layer.cornerRadius = 20
         sliderSetup()
     }
     // MARK: - IB Actions
