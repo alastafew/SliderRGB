@@ -25,18 +25,15 @@ final class ViewController: UIViewController {
     }
     // MARK: - IB Actions
     @IBAction private func redSliderAction() {
-        redValueLabel.text = String(
-            format: "%.2f", redSlider.value/Float(maxValue))
+        redValueLabel.text = String(format: "%.2f", redSlider.value/Float(maxValue))
         screenAction()
     }
     @IBAction private func greenSliderAction() {
-        greenValueLabel.text = String(
-            format: "%.2f", greenSlider.value/Float(maxValue))
+        greenValueLabel.text = String(format: "%.2f", greenSlider.value/Float(maxValue))
         screenAction()
     }
     @IBAction private func blueSliderAction() {
-        blueValueLabel.text = String(
-            format: "%.2f", blueSlider.value/Float(maxValue))
+        blueValueLabel.text = String(format: "%.2f", blueSlider.value/Float(maxValue))
         screenAction()
     }
     
