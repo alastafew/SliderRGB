@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class SetColorViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet private var screenView: UIView!
