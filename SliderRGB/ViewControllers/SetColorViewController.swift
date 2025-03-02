@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol BGViewControllerDelegate: AnyObject {
+    func setBGColor()
+}
+
 final class SetColorViewController: UIViewController {
     
     // MARK: - IB Outlets
@@ -20,6 +24,11 @@ final class SetColorViewController: UIViewController {
     @IBOutlet private var greenSlider: UISlider!
     @IBOutlet private var blueSlider: UISlider!
     
+    @IBAction func doneButtonPressed() {
+        dismiss(animated: true)
+    }
+    
+    // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +40,11 @@ final class SetColorViewController: UIViewController {
         blueLabel.text = string(from: blueSlider)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let bgVC = segue.destination as? BGViewController
+        bgVC?.delegate = self
+    }
+    
     // MARK: - IB Actions
     @IBAction private func sliderAction() {
         setColor()
@@ -40,16 +54,22 @@ final class SetColorViewController: UIViewController {
         blueLabel.text = string(from: blueSlider)
     }
     
-    // MARK: - Private methods
-    private func setColor() {
+    @IBAction private func unwind(for segue: UIStoryboardSegue){
+        setBGColor()
+    }
+
+    internal func setColor() {
         colorView.backgroundColor = UIColor(
             red: redSlider.value.cgFloat(),
             green: greenSlider.value.cgFloat(),
             blue: blueSlider.value.cgFloat(),
             alpha: 1
         )
+        let _: Color = .init(red: redSlider.value.cgFloat(), green: greenSlider.value.cgFloat(), blue: blueSlider.value.cgFloat(), alpha: 1)
+        
     }
     
+    // MARK: - Private Methods
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
@@ -59,5 +79,11 @@ final class SetColorViewController: UIViewController {
 extension Float {
     func cgFloat() -> CGFloat {
         CGFloat(self)
+    }
+}
+
+// MARK: - SetColorViewController
+extension SetColorViewController: BGViewControllerDelegate {
+    func setBGColor() {
     }
 }
