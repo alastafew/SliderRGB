@@ -6,12 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0E5254F02D74A6DB00D763A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5254E42D74A6DB00D763A9 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0E3D7CC82D4D45EE009D9F7C /* SliderRGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderRGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E5254E42D74A6DB00D763A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0E3D7CDA2D4D45EF009D9F7C /* Exceptions for "SliderRGB" folder in "SliderRGB" target */ = {
+		0E8D1CA22D74A78400478B91 /* Exceptions for "SupportingFiles" folder in "SliderRGB" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,12 +26,22 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0E3D7CCA2D4D45EE009D9F7C /* SliderRGB */ = {
+		0E5254F42D74A6E100D763A9 /* Stroryboards */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Stroryboards;
+			sourceTree = "<group>";
+		};
+		0E8D1CA02D74A73100478B91 /* SupportingFiles */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0E3D7CDA2D4D45EF009D9F7C /* Exceptions for "SliderRGB" folder in "SliderRGB" target */,
+				0E8D1CA22D74A78400478B91 /* Exceptions for "SupportingFiles" folder in "SliderRGB" target */,
 			);
-			path = SliderRGB;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		0E8D1CA12D74A74500478B91 /* ViewControllers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,7 +60,7 @@
 		0E3D7CBF2D4D45EE009D9F7C = {
 			isa = PBXGroup;
 			children = (
-				0E3D7CCA2D4D45EE009D9F7C /* SliderRGB */,
+				0E5254EC2D74A6DB00D763A9 /* SliderRGB */,
 				0E3D7CC92D4D45EE009D9F7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +71,17 @@
 				0E3D7CC82D4D45EE009D9F7C /* SliderRGB.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0E5254EC2D74A6DB00D763A9 /* SliderRGB */ = {
+			isa = PBXGroup;
+			children = (
+				0E8D1CA12D74A74500478B91 /* ViewControllers */,
+				0E8D1CA02D74A73100478B91 /* SupportingFiles */,
+				0E5254F42D74A6E100D763A9 /* Stroryboards */,
+				0E5254E42D74A6DB00D763A9 /* Assets.xcassets */,
+			);
+			path = SliderRGB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,7 +100,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0E3D7CCA2D4D45EE009D9F7C /* SliderRGB */,
+				0E5254F42D74A6E100D763A9 /* Stroryboards */,
+				0E8D1CA02D74A73100478B91 /* SupportingFiles */,
+				0E8D1CA12D74A74500478B91 /* ViewControllers */,
 			);
 			name = SliderRGB;
 			packageProductDependencies = (
@@ -122,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5254F02D74A6DB00D763A9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +176,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4Q5G5KZB27;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SliderRGB/Info.plist;
+				INFOPLIST_FILE = SliderRGB/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -179,7 +208,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4Q5G5KZB27;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SliderRGB/Info.plist;
+				INFOPLIST_FILE = SliderRGB/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
