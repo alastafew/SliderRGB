@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Set Color View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SliderRGB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SetColorViewController" customModule="SliderRGB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,13 +139,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueLabel" destination="P2k-j8-Tl5" id="0oa-1M-Vt1"/>
                         <outlet property="blueSlider" destination="Z3Y-oW-g6X" id="yOK-d0-ZeZ"/>
-                        <outlet property="blueValueLabel" destination="P2k-j8-Tl5" id="0oa-1M-Vt1"/>
+                        <outlet property="colorView" destination="LDW-SH-FYe" id="Rlm-Ei-L5N"/>
+                        <outlet property="greenLabel" destination="tDN-wf-rRq" id="eio-vK-cuM"/>
                         <outlet property="greenSlider" destination="njA-nu-Rc9" id="jhW-OX-93j"/>
-                        <outlet property="greenValueLabel" destination="tDN-wf-rRq" id="eio-vK-cuM"/>
+                        <outlet property="redLabel" destination="uoI-ma-oKh" id="NG8-Vs-X3c"/>
                         <outlet property="redSlider" destination="5Ad-Nr-5gy" id="GW4-AV-4Og"/>
-                        <outlet property="redValueLabel" destination="uoI-ma-oKh" id="NG8-Vs-X3c"/>
-                        <outlet property="screenView" destination="LDW-SH-FYe" id="Rlm-Ei-L5N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
