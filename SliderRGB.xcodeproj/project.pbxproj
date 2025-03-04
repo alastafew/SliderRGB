@@ -44,11 +44,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		0E8D1CED2D74D7BA00478B91 /* Models */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Models;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +76,6 @@
 		0E5254EC2D74A6DB00D763A9 /* SliderRGB */ = {
 			isa = PBXGroup;
 			children = (
-				0E8D1CED2D74D7BA00478B91 /* Models */,
 				0E8D1CA12D74A74500478B91 /* ViewControllers */,
 				0E8D1CA02D74A73100478B91 /* SupportingFiles */,
 				0E5254F42D74A6E100D763A9 /* Stroryboards */,
@@ -109,7 +103,6 @@
 				0E5254F42D74A6E100D763A9 /* Stroryboards */,
 				0E8D1CA02D74A73100478B91 /* SupportingFiles */,
 				0E8D1CA12D74A74500478B91 /* ViewControllers */,
-				0E8D1CED2D74D7BA00478B91 /* Models */,
 			);
 			name = SliderRGB;
 			packageProductDependencies = (
