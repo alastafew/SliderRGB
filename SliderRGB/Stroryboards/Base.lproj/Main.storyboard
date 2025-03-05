@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="height" constant="200" id="aeU-GH-rsR"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-LC-jJe">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-LC-jJe">
                                 <rect key="frame" x="16" y="284" width="382" height="122"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wGx-eZ-Jsn">
@@ -94,7 +94,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Xtq-Az-HRa">
-                                        <rect key="frame" x="60" y="10.666666666666686" width="30" height="101"/>
+                                        <rect key="frame" x="51" y="10.666666666666686" width="30" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU3-La-ROk">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="17"/>
@@ -120,24 +120,24 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3id-f1-ocn">
-                                        <rect key="frame" x="106" y="4" width="210" height="114"/>
+                                        <rect key="frame" x="88" y="4" width="237" height="114"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-FE-wZZ">
-                                                <rect key="frame" x="-2" y="0.0" width="214" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.42425000667572021" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oPU-qC-PXX" userLabel="Red Slider">
+                                                <rect key="frame" x="-2" y="0.0" width="241" height="31"/>
                                                 <connections>
-                                                    <action selector="rgbSlider:" destination="08y-L8-LKC" eventType="valueChanged" id="Uzi-rJ-dAo"/>
+                                                    <action selector="rgbSlider:" destination="08y-L8-LKC" eventType="valueChanged" id="pbS-WK-wii"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kUK-Vz-enT">
-                                                <rect key="frame" x="-2" y="42" width="214" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.42425000667572021" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-eY-cDU" userLabel="Green Slider">
+                                                <rect key="frame" x="-2" y="42" width="241" height="31"/>
                                                 <connections>
-                                                    <action selector="rgbSlider:" destination="08y-L8-LKC" eventType="valueChanged" id="BfJ-SV-wdr"/>
+                                                    <action selector="rgbSlider:" destination="08y-L8-LKC" eventType="valueChanged" id="49L-10-GaW"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Yb-RB-21M" userLabel="Blue Slider">
-                                                <rect key="frame" x="-2" y="84" width="214" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.42425000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Yb-RB-21M" userLabel="Blue Slider">
+                                                <rect key="frame" x="-2" y="84" width="241" height="31"/>
                                                 <connections>
-                                                    <action selector="rgbSlider:" destination="08y-L8-LKC" eventType="valueChanged" id="hPO-1M-w70"/>
+                                                    <action selector="rgbSlider:" destination="08y-L8-LKC" eventType="valueChanged" id="efc-Dz-ypI"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -151,7 +151,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="08y-L8-LKC" id="qSP-Ol-HjL"/>
+                                                    <outlet property="delegate" destination="08y-L8-LKC" id="eQj-b9-U0d"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f07-sX-s12">
@@ -160,16 +160,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="08y-L8-LKC" id="j2t-NL-XAk"/>
+                                                    <outlet property="delegate" destination="08y-L8-LKC" id="zD5-IB-PfJ"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKZ-QE-cho">
                                                 <rect key="frame" x="0.0" y="88" width="50" height="34"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardType="decimalPad"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="08y-L8-LKC" id="4w4-Wb-ADZ"/>
+                                                    <outlet property="delegate" destination="08y-L8-LKC" id="pZ3-iN-CRg"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -186,7 +186,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneButtonPressed" destination="08y-L8-LKC" eventType="touchUpInside" id="y03-MP-aXM"/>
+                                    <action selector="doneButtonPressed" destination="08y-L8-LKC" eventType="touchUpInside" id="zYB-dO-yVZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,16 +204,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueLabel" destination="7BN-FL-Bi5" id="1ga-cT-3C6"/>
-                        <outlet property="blueSlider" destination="9Yb-RB-21M" id="c64-fC-bce"/>
-                        <outlet property="blueTextField" destination="lKZ-QE-cho" id="KYb-EZ-Yal"/>
-                        <outlet property="colorView" destination="ro2-6M-cdi" id="Cvk-1M-MBO"/>
-                        <outlet property="greenLabel" destination="rom-j8-nw9" id="OdM-K5-d8G"/>
-                        <outlet property="greenSlider" destination="kUK-Vz-enT" id="S48-xC-mfX"/>
-                        <outlet property="greenTextField" destination="f07-sX-s12" id="WVn-Lk-D8V"/>
-                        <outlet property="redLabel" destination="JU3-La-ROk" id="9CN-Rz-EYM"/>
-                        <outlet property="redSlider" destination="LhU-FE-wZZ" id="pL4-82-cdb"/>
-                        <outlet property="redTextField" destination="2fl-hI-NyZ" id="Vc0-ea-rVb"/>
+                        <outlet property="blueLabel" destination="7BN-FL-Bi5" id="aJh-kS-kU6"/>
+                        <outlet property="blueSlider" destination="9Yb-RB-21M" id="nzW-CZ-TUl"/>
+                        <outlet property="blueTextField" destination="lKZ-QE-cho" id="uTk-yw-S6Q"/>
+                        <outlet property="colorView" destination="ro2-6M-cdi" id="Kug-nB-WXy"/>
+                        <outlet property="greenLabel" destination="rom-j8-nw9" id="STV-al-dJy"/>
+                        <outlet property="greenSlider" destination="BlR-eY-cDU" id="nCB-gE-ZGi"/>
+                        <outlet property="greenTextField" destination="f07-sX-s12" id="mm7-xM-igZ"/>
+                        <outlet property="redLabel" destination="JU3-La-ROk" id="C9R-M7-1yx"/>
+                        <outlet property="redSlider" destination="oPU-qC-PXX" id="4gi-Bk-bCO"/>
+                        <outlet property="redTextField" destination="2fl-hI-NyZ" id="gf0-fi-M9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXW-Ny-pHl" sceneMemberID="firstResponder"/>

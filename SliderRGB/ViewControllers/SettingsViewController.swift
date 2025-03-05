@@ -8,7 +8,7 @@
 import UIKit
 
 final class SettingsViewController: UIViewController {
-    
+
     // MARK: - IB Outlets
     @IBOutlet private var colorView: UIView!
     
@@ -24,11 +24,9 @@ final class SettingsViewController: UIViewController {
     @IBOutlet private var greenTextField: UITextField!
     @IBOutlet private var blueTextField: UITextField!
     
-    
     // MARK: - Public Properties
     //Экземпляр класса MainViewController weak-опционал(nil) "?" ,
     //может и без него unowned-обязательное св-во "!"
-    // Инициал св-во при переходе
     unowned var delegate: SettingsViewControllerDelegate!
     var viewColor: UIColor!
     
@@ -37,23 +35,24 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
         //Первичные настройки
         colorView.layer.cornerRadius = 15
-        
-        redSlider.tintColor = .red
-        greenSlider.tintColor = .green
-        //blueSlider.tintColor = .blue
         //переданный цвет ставим на мал прямоуг
         colorView.backgroundColor = viewColor
+
+        redSlider.tintColor = .red
+        greenSlider.tintColor = .green
         
+        colorView.backgroundColor = viewColor
         //Один метод, но разные параметры
         setValue(for: redSlider, greenSlider, blueSlider)
         setValue(for: redLabel, greenLabel, blueLabel)
         setValue(for: redTextField, greenTextField, blueTextField)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       //tap to screen
-        super.touchesBegan(touches, with: event)
-        // hide keyboard
+        //tap to screen
+         super.touchesBegan(touches, with: event)
+         // hide keyboard
         view.endEditing(true)
     }
     
@@ -61,22 +60,21 @@ final class SettingsViewController: UIViewController {
     @IBAction private func rgbSlider(_ sender: UISlider) {
         switch sender {
         case redSlider:
-            setValue(for: redSlider)
+            setValue(for: redLabel)
             setValue(for: redTextField)
         case greenSlider:
-            setValue(for: greenSlider)
+            setValue(for: greenLabel)
             setValue(for: greenTextField)
         default:
-            setValue(for: blueSlider)
+            setValue(for: blueLabel)
             setValue(for: blueTextField)
         }
-        // Обновляем цвет вьюшки
+        // refresh color to view
         setColor()
     }
-
-    @IBAction func doneButtonPressed() {
-        // Обращаемся к Мэйн и вызвали метод, цвет передаем в параметр
-        delegate.setColor(colorView.backgroundColor ?? .black)
+    // Обращаемся к Мэйн и вызвали метод, цвет передаем в параметр
+    @IBAction private func doneButtonPressed() {
+        delegate.setColor(colorView.backgroundColor ?? .white)
         dismiss(animated: true)
     }
 }
@@ -117,8 +115,8 @@ private extension SettingsViewController {
         // Разбиваем цвет на компоненты
         colorSliders.forEach { slider in
             switch slider {
-            case redSlider: slider.value = Float(ciColor.red)
-            case greenSlider: slider.value = Float(ciColor.green)
+            case redSlider: redSlider.value = Float(ciColor.red)
+            case greenSlider: greenSlider.value = Float(ciColor.green)
             default: blueSlider.value = Float(ciColor.blue)
             }
         }
@@ -128,7 +126,7 @@ private extension SettingsViewController {
         //Округляем значения слайдера
         String(format: "%.2f", slider.value)
     }
-    //
+    
     func showAlert(withTitle title: String, andMessage message: String, textField:
         UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
